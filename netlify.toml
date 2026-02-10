@@ -2,5 +2,5 @@
 
 [build]
 base="ems_frontend"
-command="npm install && run build"
+command="npm install && npm run build"
 publish="dist"
