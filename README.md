@@ -83,11 +83,26 @@ Username
 Password
 
 Update application.properties:
-spring.datasource.url=jdbc:postgresql://<host>:<port>/<database>
-spring.datasource.username=<username>
-spring.datasource.password=<password>
+# ===============================
+# DATABASE CONFIGURATION
+# ===============================
+spring.datasource.url=jdbc:postgresql://<HOST>:<PORT>/<DATABASE>
+spring.datasource.username=<USERNAME>
+spring.datasource.password=<PASSWORD>
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# ===============================
+# JPA / HIBERNATE CONFIG
+# ===============================
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+
+# ===============================
+# SERVER CONFIG (Optional)
+# ===============================
+server.port=8080
 
 3️⃣ Run Backend Locally
 ->mvn spring-boot:run
