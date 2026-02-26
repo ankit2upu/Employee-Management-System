@@ -36,9 +36,9 @@ Axios
 React Router
 Bootstrap / Tailwind (if used)
 ---
-📁 Project Structure
+##📁 Project Structure
 🖥️ Backend (Spring Boot)
-
+```
 employee-management-backend/
 │── src/main/java/com/example/ems/
 │   ├── controller/
@@ -53,10 +53,11 @@ employee-management-backend/
 │── pom.xml
 │── mvnw
 │── mvnw.cmd
-
+```
 ---
 💻 Frontend (React)
 employee-management-frontend/
+```
 │── public/
 │── src/
 │   ├── components/
@@ -67,9 +68,9 @@ employee-management-frontend/
 │
 │── package.json
 │── netlify.toml (if used)
-
+```
 ---
-⚙️ Backend Setup (Spring Boot)
+##⚙️ Backend Setup (Spring Boot)
 1️⃣ Clone the Repository
 git clone https://github.com/your-username/employee-management-backend.git
 cd employee-management-backend
@@ -81,29 +82,23 @@ Port
 Database Name
 Username
 Password
-
+---
 Update application.properties:
-# ===============================
 # DATABASE CONFIGURATION
-# ===============================
 spring.datasource.url=jdbc:postgresql://<HOST>:<PORT>/<DATABASE>
 spring.datasource.username=<USERNAME>
 spring.datasource.password=<PASSWORD>
 spring.datasource.driver-class-name=org.postgresql.Driver
 
-# ===============================
 # JPA / HIBERNATE CONFIG
-# ===============================
 spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
 
-# ===============================
 # SERVER CONFIG (Optional)
-# ===============================
 server.port=8080
-
+---
 3️⃣ Run Backend Locally
 ->mvn spring-boot:run
 Backend runs at:
