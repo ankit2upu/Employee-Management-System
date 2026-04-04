@@ -15,7 +15,7 @@ A full-stack Employee Management System built with:
 📌 Live Demo
 
 🔗 Frontend (Netlify):
-👉 https://your-frontend-name.netlify.app
+👉 https://emsfrontendd.netlify.app/
 
 🔗 Backend (Render API):
 👉 https://your-backend-name.onrender.com
