@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div>
         <header >
-            <nav className='navbar navbar-dark bg-dark  '>
+            <nav className='navbar navbar-dark bg-dark  fixed-top '>
               <Link to="/"><img src={ems_nav} alt=""
                 style={{width:"250px", height:"45px" ,   marginLeft:"20px", cursor:"pointer"}}
                 /></Link>
@@ -24,7 +24,8 @@ const Header = () => {
                       }} >
                     <li> <Link to="/">Home</Link> </li>
                      <li> <Link to="/add-employee">Add Employees</Link></li>
-                     <li> <Link > Employees</Link>   </li>
+                     <li> <Link to="/employees" > Employees</Link>   </li>
+                     <li> <Link to="hj" > Admin Login</Link>   </li>
                   
                  
                 </ul>

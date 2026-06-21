@@ -2,6 +2,7 @@ import { useState } from 'react'
 import ListEmployeeComponent from './components/ListEmployeeComponent'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Home from './components/Home'
 import { BrowserRouter, Routes,Route } from 'react-router-dom'
 import Employee from './components/Employee'
 
@@ -24,9 +25,10 @@ function App() {
        
          <Routes>
           {/* http://localhost:5173 */}
-          <Route path='/' element={<ListEmployeeComponent/>}>
+        
+          <Route path='/' element={<Home/>}></Route>
             
-       </Route>
+      
        {/* http://localhost:5173/employees */}
        <Route path='/employees' element={<ListEmployeeComponent/>}></Route>
 
