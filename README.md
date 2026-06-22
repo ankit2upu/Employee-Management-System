@@ -7,7 +7,7 @@ A full-stack Employee Management System built with:
 
 💻 Frontend: React
 
-🗄️ Database: Railway (PostgreSQL/MySQL)
+🗄️ Database: Railway or Aiven (PostgreSQL/MySQL)
 
 🌐 Backend Deployment: Render
 
