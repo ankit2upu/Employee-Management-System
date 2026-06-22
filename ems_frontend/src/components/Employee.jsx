@@ -44,48 +44,108 @@ const Employee = () => {
     setEmail(e.target.value)
   }
 
-   
-
-   function saveOrUpdateEmployee(e){
+  //  function saveOrUpdateEmployee(e){
      
+  //   e.preventDefault();
+
+  //   if(!ValidateForm()){
+  //     return;  //stop api call
+    
+  //     const employee={firstName, lastName,email}
+  //   console.log(employee)
+  //   if(id){
+  //     updateEmployee(id,employee).then( (response)=> {
+  //       console.log(response.data);
+  //       navigator('/employees');
+  //     }).catch(error => {
+  //       console.error(error);
+  //     })
+  //   } else{
+  //         createEmployee(employee).then((response)=>{
+  //     console.log(response.data);
+  //     navigator('/employees')
+
+  //   }).catch( (error) =>{
+  //     console.log("status:",error.response?.status);
+  //     if(error.response?.status === 401){
+  //       alert("Admin Login Required");
+  //      setTimeout( ()=>{
+  //        navigator('/login');
+  //      },100);
+
+  //       return;
+  //     } else{
+  //         console.error(error); }
+  //   })
+
+  //   }
+  // }
+
+  function saveOrUpdateEmployee(e) {
 
     e.preventDefault();
 
-    if(!ValidateForm()){
-      return;  //stop api call
-    
-      const employee={firstName, lastName,email}
-    console.log(employee)
-    if(id){
-      updateEmployee(id,employee).then( (response)=> {
-        console.log(response.data);
-        navigator('/employees');
-      }).catch(error => {
-        console.error(error);
-      })
-    } else{
-          createEmployee(employee).then((response)=>{
-      console.log(response.data);
-      navigator('/employees')
-
-    }).catch( error =>{
-      console.error(error);
-    })
+    if (!ValidateForm()) {
+        return;
     }
 
+    const employee = {
+        firstName,
+        lastName,
+        email
+    };
+
+    console.log(employee);
+
+    if (id) {
+
+        updateEmployee(id, employee)
+            .then((response) => {
+                console.log(response.data);
+                navigator('/employees');
+            })
+            .catch((error) => {
+               console.log("Status:", error.response?.status);
+
+                if (error.response?.status === 401) {
+                    alert("Admin Login Required");
+                    navigator('/login');
+                    return;
+                }
+                console.error(error);
+            });
+
+    } else {
+
+        createEmployee(employee)
+            .then((response) => {
+                console.log(response.data);
+                navigator('/employees');
+            })
+            .catch((error) => {
+
+                console.log("Status:", error.response?.status);
+
+                if (error.response?.status === 401) {
+                    alert("Admin Login Required");
+                    navigator('/login');
+                    return;
+                }
+
+                console.error(error);
+            });
+    }
+}
+
+    // const employee={firstName, lastName,email}
+    // console.log(employee)
+
+    // createEmployee(employee).then((response)=>{
+    //   console.log(response.data);
+    //   navigator('/employees')
+
+    // })
    
-
-    }
-
-    const employee={firstName, lastName,email}
-    console.log(employee)
-
-    createEmployee(employee).then((response)=>{
-      console.log(response.data);
-      navigator('/employees')
-
-    })
-   }
       // validatin function
 
    function ValidateForm(){
@@ -129,7 +189,11 @@ const Employee = () => {
    }
 
   return (
-    <div className='container'>
+    <div className='container'
+    style={{marginTop:"80px"}}
+    >
+
+      
       <br /> <br />
       <div className='row' >
         <div className='card col-md-6 offset-md-3 offset-md-3 ' >

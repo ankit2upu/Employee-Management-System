@@ -31,19 +31,29 @@ const ListEmployeeComponent = () => {
     navigator(`/edit-employee/${id}`)
    }
 
+
    function removeEmployee(id){
     console.log(id);
     deleteEmployee(id).then( (Response) =>{
       getAllEmployee();
 
-    }).catch(error =>{
+    }).catch((error) =>{
+       console.log("Status:", error.response?.status);
+
+            if(error.response?.status === 401){
+                alert("Admin Login Required");
+                navigator('/login');
+                return;
+            }
       console.error(error);
     } )
    }
 
 
   return (
-    <div className='container'>
+    <div className='container '
+     style={{marginTop:"80px", marginBottom:"80"}}
+    >
 
         <h2 className='text-center'>List of Employee</h2>
         <button type="button" className='btn btn-primary mb-2'  onClick={addNewEmployee}  >

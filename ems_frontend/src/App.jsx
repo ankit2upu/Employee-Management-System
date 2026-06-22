@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import Home from './components/Home'
 import { BrowserRouter, Routes,Route } from 'react-router-dom'
 import Employee from './components/Employee'
+import Login from './components/Login'
 
 
 
@@ -27,6 +28,7 @@ function App() {
           {/* http://localhost:5173 */}
         
           <Route path='/' element={<Home/>}></Route>
+          <Route path='/login' element={<Login/>}></Route>
             
       
        {/* http://localhost:5173/employees */}
