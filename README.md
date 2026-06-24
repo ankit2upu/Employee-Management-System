@@ -41,19 +41,30 @@ Bootstrap / Tailwind (if used)
 🖥️ Backend (Spring Boot)
 ```
 employee-management-backend/
-│── src/main/java/com/example/ems/
-│   ├── controller/
-│   ├── service/
-│   ├── repository/
-│   ├── model/
-│   └── EmployeeManagementApplication.java
 │
-│── src/main/resources/
-│   ├── application.properties
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── net/ems/ems_backend/
+│       │       ├── controller/
+│       │       ├── service/
+│       │       ├── repository/
+│       │       ├── entity/
+│       │       ├── mapper/
+│       │       ├── exception/
+│       │       ├── springConfig/
+│       │       │   └── SpringConfig.java
+│       │       └── EmsBackendApplication.java
+│       │
+│       └── resources/
+│           └── application.properties
 │
-│── pom.xml
-│── mvnw
-│── mvnw.cmd
+├── .gitignore
+├── pom.xml
+├── mvnw
+├── mvnw.cmd
+└── README.md
+
 ```
 ---
 💻 Frontend (React)
