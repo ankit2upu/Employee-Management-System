@@ -1,7 +1,7 @@
 
 🚀 Employee Management System (EMS) 👉 [![Live Demo](https://img.shields.io/badge/Live-Demo-green)](https://emsfrontendd.netlify.app/)
 
-A full-stack Employee Management System built with:
+Employee Management System is a full-stack web application developed using React.js, Spring Boot, Spring Data JPA, and MySQL. The system provides a secure and user-friendly platform for managing employee records, including creating, viewing, updating, and deleting employee information. It follows a modern client-server architecture with RESTful APIs and integrates Spring Security to restrict administrative operations while allowing controlled access to employee data.
 
 ⚙️ Backend: Spring Boot
 
