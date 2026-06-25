@@ -7,7 +7,7 @@ Employee Management System is a full-stack web application developed using React
 
 💻 Frontend: React
 
-🗄️ Database: Railway or Aiven (PostgreSQL/MySQL)
+🗄️ Database: Railway or Aiven (MySQL)
 
 🌐 Backend Deployment: Render
 
